@@ -21,13 +21,21 @@ public class CompareFile {
 		bonusNumbers = new ArrayList<Integer>();
 	}
 	
-	public void read(){
+	//TODO: Perhaps only need one scanner, too many scanners
+	public void readInContentOfFile(){
+		READ_FILE_ONE = getFile(DATA_FILE_ONE_URL);
+		READ_FILE_TWO = getFile(DATA_FILE_TWO_URL);
+	}
+	
+	public Scanner getFile(String fileUrl)
+	{
 		try {
-			READ_FILE_ONE = new Scanner(new File(DATA_FILE_ONE_URL));
-			READ_FILE_TWO = new Scanner(new File(DATA_FILE_TWO_URL));
+			return new Scanner(new File(fileUrl));
 		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return new Scanner("");
 	}
 
 	public void readTextFile() {
