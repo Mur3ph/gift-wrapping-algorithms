@@ -5,7 +5,7 @@ public class Workday
     private int total = 0;
     private int limit = 1000;
     
-    public void first()
+    public void numberDivableByThreeAndFive()
     {
 	System.out.println("Workday Part One");
 	for (int x = 0; x < limit; x++)
@@ -13,7 +13,8 @@ public class Workday
 	    if (x % 3 == 0)
 	    {
 		total = total + x;
-	    } else if (x % 5 == 0)
+	    } 
+	    else if (x % 5 == 0)
 	    {
 		total = total + x;
 	    }
@@ -21,7 +22,7 @@ public class Workday
 	System.out.println("First: " + total);
     }
     
-    public void second()
+    public void numberDivableByThreeAndFive2()
     {
 	System.out.println("");
 	System.out.println("Workday Part Two");
