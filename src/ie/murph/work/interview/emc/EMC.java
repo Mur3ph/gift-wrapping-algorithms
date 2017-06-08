@@ -6,14 +6,15 @@ public class EMC {
 	private final int MAX_NUMBER = 51;
 	private final int NUMBER_THREE = 3;
 	private final int NUMBER_FIVE = 5;
-	private int index;
+	private int INDEX;
+	private final String WORD = "Navan";
 
 	public void SnapCrackleOrPop() {
 		System.out.println("EMC");
-		for (index = 1; index < MAX_NUMBER; index++) {
-			System.out.println(snap(index));
-			System.out.println(crackle(index));
-			System.out.println(pop(index));
+		for (INDEX = 1; INDEX < MAX_NUMBER; INDEX++) {
+			System.out.println(snap(INDEX));
+			System.out.println(crackle(INDEX));
+			System.out.println(pop(INDEX));
 			System.out.println(printIndex());
 		}
 	}
@@ -44,17 +45,26 @@ public class EMC {
 	}
 
 	private int printIndex() {
-		return this.index;
+		return this.INDEX;
 	}
 
 	public void reverseWord() {
+		System.out.println("*** Reverse a String ***");
+		StringBuilder reverseIt = convertStringToStringBuilderObj(WORD);
+		System.out.println("String reverced innit: " + convertStringBuilderObjToString(reverseStringBuilderObj(reverseIt)));
 		System.out.println("");
-		String word = "Navan";
-		StringBuilder reverseIt = new StringBuilder(word);
-		reverseIt.reverse();
-		String jobsDone = reverseIt.toString();
-		System.out.println("String reverced innit: " + jobsDone);
-		System.out.println("");
+	}
+	
+	private StringBuilder convertStringToStringBuilderObj(String stringToConvert){
+		return new StringBuilder(stringToConvert);
+	}
+	
+	private StringBuilder reverseStringBuilderObj(StringBuilder builderToReverse){
+		return builderToReverse.reverse();
+	}
+	
+	private String convertStringBuilderObjToString(StringBuilder builderToReverse){
+		return builderToReverse.toString();
 	}
 
 }
