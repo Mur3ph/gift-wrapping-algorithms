@@ -2,6 +2,7 @@ package ie.murph.work.interview.emc;
 
 public class EMC {
 
+	private static final String EMPTY_STRING = "";
 	private final int MAX_NUMBER = 51;
 	private final int NUMBER_THREE = 3;
 	private final int NUMBER_FIVE = 5;
@@ -21,21 +22,21 @@ public class EMC {
 		if (hasNoRemainder(index, NUMBER_THREE) && hasNoRemainder(index, NUMBER_FIVE)) {
 			return "Snap";
 		}
-		return "";
+		return EMPTY_STRING;
 	}
 
 	private String crackle(int index) {
 		if (hasNoRemainder(index, NUMBER_THREE)) {
 			return "Crackle";
 		}
-		return "";
+		return EMPTY_STRING;
 	}
 
 	private String pop(int index) {
 		if (hasNoRemainder(index, NUMBER_FIVE)) {
 			return "Pop";
 		}
-		return "";
+		return EMPTY_STRING;
 	}
 
 	private boolean hasNoRemainder(int index, int numberToCheck) {
