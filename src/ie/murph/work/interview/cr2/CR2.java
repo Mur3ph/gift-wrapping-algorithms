@@ -14,7 +14,7 @@ public class CR2 {
 		readUserInput();
 		
 		for (int x = 2; x < userInputNumber / 2; x++) {
-			if (numberIsDividableByAnotherNumber(x)) {
+			if (hasNoRemainder(x)) {
 				setIsItPrime(false);
 				break;
 			}
@@ -32,7 +32,7 @@ public class CR2 {
 		userInputNumber = SCANNER.nextInt();
 	}
 	
-	private boolean numberIsDividableByAnotherNumber(int index){
+	private boolean hasNoRemainder(int index){
 		return userInputNumber % index == 0;
 	}
 	
