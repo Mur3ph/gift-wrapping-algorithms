@@ -3,7 +3,7 @@ package ie.murph.work.interview.workday;
 public class Workday
 {
     private int total = 0;
-    private int limit = 1000;
+    private final int limit = 1000;
 
     public void numberDivableByThreeAndFive()
     {
@@ -19,7 +19,7 @@ public class Workday
     {
 	if (hasNoRemainder(numberToCheckAgainst, 3))
 	{
-	    total = total + numberToCheckAgainst;
+	    total += numberToCheckAgainst;
 	}
     }
 
@@ -27,7 +27,7 @@ public class Workday
     {
 	if (hasNoRemainder(numberToCheckAgainst, 5))
 	{
-	    total = total + numberToCheckAgainst;
+	    total += numberToCheckAgainst;
 	}
     }
 
