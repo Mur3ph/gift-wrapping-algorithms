@@ -7,7 +7,6 @@ public class Workday
 
     public void numberDivableByThreeAndFive()
     {
-	System.out.println("Workday Part One");
 	for (int x = 0; x < limit; x++)
 	{
 	    numberDividableByThree(x);
@@ -35,7 +34,7 @@ public class Workday
     public void numberDivableByThreeAndFive2()
     {
 	System.out.println("");
-	System.out.println("Workday Part Two");
+	total = 0;
 	for (int x = 0; x < limit; x++)
 	{
 	    if (hasNoRemainder(x, 3) || hasNoRemainder(x, 5))
