@@ -14,7 +14,7 @@ public class Answer {
 
 		Workday workday = new Workday();
 		workday.numberDivableByThreeAndFive();
-		workday.numberDivableByThreeAndFive2();
+		workday.numberDividableByThreeAndFivePartDeux();
 
 		System.out.println("");
 
