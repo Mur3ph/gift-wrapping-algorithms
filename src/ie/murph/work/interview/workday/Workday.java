@@ -2,7 +2,10 @@ package ie.murph.work.interview.workday;
 
 public class Workday {
 	private int total = 0;
-	private final int limit = 1000;
+	private final int limit = 18;
+	private final int numberThree = 3;
+	private final int numberFive = 5;
+	private final int noRemainder = 0;
 
 	public void numberDivableByThreeAndFive() {
 		for (int x = 0; x < limit; x++) {
@@ -12,30 +15,30 @@ public class Workday {
 		System.out.println("First: " + total);
 	}
 
-	private void numberDividableByThree(int numberToCheckAgainst) {
-		if (hasNoRemainder(numberToCheckAgainst, 3)) {
-			total += numberToCheckAgainst;
+	private void numberDividableByThree(int loopingNumbersToCheckAgainst) {
+		if (hasNoRemainder(loopingNumbersToCheckAgainst, numberThree)) {
+			total += loopingNumbersToCheckAgainst;
 		}
 	}
 
-	private void numberDividableByFive(int numberToCheckAgainst) {
-		if (hasNoRemainder(numberToCheckAgainst, 5)) {
-			total += numberToCheckAgainst;
+	private void numberDividableByFive(int loopingNumbersToCheckAgainst) {
+		if (hasNoRemainder(loopingNumbersToCheckAgainst, numberFive)) {
+			total += loopingNumbersToCheckAgainst;
 		}
 	}
 
 	public void numberDividableByThreeAndFivePartDeux() {
 		System.out.println("");
 		total = 0;
-		for (int x = 0; x < limit; x++) {
-			if (hasNoRemainder(x, 3) || hasNoRemainder(x, 5)) {
-				total += x;
+		for (int loopingNumbersToCheckAgainst = 0; loopingNumbersToCheckAgainst < limit; loopingNumbersToCheckAgainst++) {
+			if (hasNoRemainder(loopingNumbersToCheckAgainst, numberThree) || hasNoRemainder(loopingNumbersToCheckAgainst, numberFive)) {
+				total += loopingNumbersToCheckAgainst;
 			}
 		}
 		System.out.println("Second: " + total);
 	}
 
 	private boolean hasNoRemainder(int index, int numberToCheck) {
-		return index % numberToCheck == 0;
+		return index % numberToCheck == noRemainder;
 	}
 }
