@@ -7,6 +7,7 @@ public class Workday {
 	private final int numberFive = 5;
 	private final int noRemainder = 0;
 
+//	TODO: This calculates twice, if both (3 and 5) are divisible by one number
 	public void numberDivableByThreeAndFive() {
 		for (int x = 0; x < limit; x++) {
 			numberDividableByThree(x);
@@ -27,6 +28,7 @@ public class Workday {
 		}
 	}
 
+//	TODO: This calculates once, if both (3 and 5) are divisible by one number
 	public void numberDividableByThreeAndFivePartDeux() {
 		System.out.println("");
 		total = 0;
