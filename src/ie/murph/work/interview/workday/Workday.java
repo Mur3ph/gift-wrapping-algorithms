@@ -2,7 +2,7 @@ package ie.murph.work.interview.workday;
 
 public class Workday {
 	private int total = 0;
-	private final int limit = 18;
+	private final int limit = 101;
 	private final int numberThree = 3;
 	private final int numberFive = 5;
 	private final int noRemainder = 0;
