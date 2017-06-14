@@ -9,6 +9,7 @@ public class Workday {
 
 //	TODO: This calculates twice, if both (3 and 5) are divisible by one number
 	public void numberDivableByThreeAndFive() {
+	    	total = 0;
 		for (int x = 0; x < limit; x++) {
 			numberDividableByThree(x);
 			numberDividableByFive(x);
