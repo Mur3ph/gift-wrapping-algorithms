@@ -1,4 +1,4 @@
-package ie.murph.work.file.comparison;
+package ie.murph.work.file.comparison.read;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,12 +13,10 @@ public class ReadFile {
 	}
 	
 	public void read(){
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
-
-			String sCurrentLine;
-
-			while ((sCurrentLine = br.readLine()) != null) {
-				System.out.println(sCurrentLine);
+		try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+			String currentLine;
+			while ((currentLine = reader.readLine()) != null) {
+				System.out.println(currentLine);
 			}
 
 		} catch (IOException e) {
