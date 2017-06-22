@@ -5,13 +5,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import ie.murph.work.file.comparison.delimiter.Delimiter;
+
 public class ReadFile {
 
 	private String filename;
 	private String currentLineOfDataFromFile;
+	private Delimiter delimiter;
 	
-	public ReadFile(String filename){
+	public ReadFile(String filename, Delimiter delimiter){
 		this.filename = filename;
+		this.delimiter = delimiter;
 	}
 	
 	public void read(){
@@ -25,7 +29,9 @@ public class ReadFile {
 	}
 	
 	private BufferedReader readEachLine(){
-		return  new BufferedReader(readFile());
+		delimiter.convertBufferToScanner(new BufferedReader(readFile()));
+		delimiter.searchForDelimiter();
+		return  delimiter.getReader();
 	}
 	
 	private FileReader readFile(){
