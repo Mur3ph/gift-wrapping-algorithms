@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class MrFibonacci {
+	
+//	Resource: https://stackoverflow.com/questions/29317414/making-fibonacci-faster?
 
 	private static Map<Long, Long> previousValuesHolder;
     static {
