@@ -10,6 +10,7 @@ public class MrFibonacci {
 	// https://stackoverflow.com/questions/29317414/making-fibonacci-faster?
 
 	private static Map<Long, Long> previousValuesHolder;
+	
 	static {
 		previousValuesHolder = new HashMap<Long, Long>();
 		previousValuesHolder.put(Long.valueOf(0), Long.valueOf(0));
@@ -17,17 +18,19 @@ public class MrFibonacci {
 	}
 
 	public static void main(String[] args) {
+		System.out.println(fibonacciExplained());
+		
 		while (true) {
 			System.out.println("Enter number: ");
 			long number = scanner().nextLong();
 			if (isNumberGreaterThanZero(number)) {
 				long beginTime = System.currentTimeMillis();
-				long fibo = getFibonacciOf(number);
+				long fibonacci = getFibonacciOf(number);
 				long endTime = System.currentTimeMillis();
 
 				long delta = endTime - beginTime;
 
-				System.out.println("F(" + number + ") = " + fibo + " ... computed     in " + delta + " milliseconds");
+				System.out.println(printFibonacci(number, fibonacci, delta));
 			} else {
 				break;
 
@@ -67,5 +70,16 @@ public class MrFibonacci {
 	
 	private static boolean isOne(long number){
 		return number == 1;
+	}
+	
+	private static String printFibonacci(long number, long fibo, long delta){
+		return "F(" + number + ") = " + fibo + " ... computed     in " + delta + " milliseconds";
+	}
+	
+	private static String fibonacciExplained(){
+		return "      Fibonacci was a mathematician from the Republic of Pisa in what is now Italy, "
+				+ "\n considered to be the most talented Western mathematician of the Middle Ages"
+				+ "\n 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, "
+				+ "\n The next number is found by adding up the two numbers before it.";
 	}
 }
