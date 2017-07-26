@@ -10,6 +10,7 @@ public class MrFibonacci {
 	// https://stackoverflow.com/questions/29317414/making-fibonacci-faster?
 
 	private static Map<Long, Long> previousValuesHolder;
+	private static final Scanner SCANNER = new Scanner(System.in);
 	
 	static {
 		previousValuesHolder = new HashMap<Long, Long>();
@@ -22,7 +23,7 @@ public class MrFibonacci {
 		
 		while (true) {
 			System.out.println("Enter number: ");
-			long number = scanner().nextLong();
+			long number = SCANNER.nextLong();
 			if (isNumberGreaterThanZero(number)) {
 				long beginTime = getCurrentTimeInMilliseconds();
 				long fibonacci = getFibonacciOf(number);
@@ -31,15 +32,12 @@ public class MrFibonacci {
 				long delta = endTime - beginTime;
 
 				System.out.println(printFibonacci(number, fibonacci, delta));
+//				askToContinue();
 			} else {
 				break;
 
 			}
 		}
-	}
-	
-	private static Scanner scanner(){
-		return new Scanner(System.in);
 	}
 	
 	private static boolean isNumberGreaterThanZero(long number){
@@ -85,5 +83,25 @@ public class MrFibonacci {
 				+ "\n considered to be the most talented Western mathematician of the Middle Ages"
 				+ "\n 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, "
 				+ "\n The next number is found by adding up the two numbers before it.";
+	}
+	
+	// Method to ask the user if they want to try again.
+		public static void askToContinue()
+		{
+			System.out.println("Do you want to run it again: (y/n)");
+			
+			String s_continue = SCANNER.nextLine();
+			if(s_continue.equalsIgnoreCase("y") || s_continue.equalsIgnoreCase("yes"))
+			{
+				// Reseting and Starting again..
+				main(new String[0]);
+			}
+			else if (s_continue.equalsIgnoreCase("n") || s_continue.equalsIgnoreCase("no"))
+			{
+				System.out.println("Good bye!");
+				System.exit(0);
+			}
+			else
+				askToContinue();
 	}
 }
