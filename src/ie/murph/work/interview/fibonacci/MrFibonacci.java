@@ -24,9 +24,9 @@ public class MrFibonacci {
 			System.out.println("Enter number: ");
 			long number = scanner().nextLong();
 			if (isNumberGreaterThanZero(number)) {
-				long beginTime = System.currentTimeMillis();
+				long beginTime = getCurrentTimeInMilliseconds();
 				long fibonacci = getFibonacciOf(number);
-				long endTime = System.currentTimeMillis();
+				long endTime = getCurrentTimeInMilliseconds();
 
 				long delta = endTime - beginTime;
 
@@ -44,6 +44,10 @@ public class MrFibonacci {
 	
 	private static boolean isNumberGreaterThanZero(long number){
 		return number >= 0;
+	}
+	
+	private static long getCurrentTimeInMilliseconds(){
+		return System.currentTimeMillis();
 	}
 	
 	private static long getFibonacciOf(long number) {
