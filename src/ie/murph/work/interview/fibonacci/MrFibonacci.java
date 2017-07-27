@@ -21,6 +21,8 @@ public class MrFibonacci {
 	public static void main(String[] args) {
 		System.out.println(fibonacciExplained());
 		
+		System.out.println(documentation());
+		
 		while (true) {
 			System.out.println("Enter number: ");
 			long number = SCANNER.nextLong();
@@ -104,4 +106,9 @@ public class MrFibonacci {
 			else
 				askToContinue();
 	}
+		
+		private static String documentation(){
+			return "   \n Getting a 'java.lang.StackOverflowError', when using 123456 number!"
+					+ "\n Resource: https://examples.javacodegeeks.com/java-basics/exceptions/java-lang-stackoverflowerror-how-to-solve-stackoverflowerror/";
+		}
 }
