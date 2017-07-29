@@ -103,7 +103,8 @@ public class MrFibonacci {
 	}
 
 	private static String documentation() {
-		return "   \n Getting a 'java.lang.StackOverflowError', when using 123456 number!"
+		return "   \n Code Resource: https://stackoverflow.com/questions/29317414/making-fibonacci-faster?"
+				+ "\n Getting a 'java.lang.StackOverflowError', when using 123456 number!"
 				+ "\n Resource: https://examples.javacodegeeks.com/java-basics/exceptions/java-lang-stackoverflowerror-how-to-solve-stackoverflowerror/";
 	}
 }
