@@ -33,7 +33,7 @@ public class MrFibonacci {
 			long delta = endTime - beginTime;
 
 			System.out.println(printFibonacci(number, fibonacci, delta));
-			askToContinue();
+			askUserToContinue();
 		} 
 	}
 
@@ -82,18 +82,24 @@ public class MrFibonacci {
 				+ "\n The next number is found by adding up the two numbers before it.";
 	}
 
-	// Method to ask the user if they want to try again.
-	public static void askToContinue() {
+	public static void askUserToContinue() {
 		System.out.println("Do you want to run it again: (y/n)");
 		String userResponse = SCANNER.nextLine();
-		if (userResponse.equalsIgnoreCase("y") || userResponse.equalsIgnoreCase("yes")) {
-			// Reseting and Starting again..
+		if (userWantsToContinue(userResponse)) {
 			resetMainThread();
-		} else if (userResponse.equalsIgnoreCase("n") || userResponse.equalsIgnoreCase("no")) {
+		} else if (userDoesNotWantToContinue(userResponse)) {
 			System.out.println("Good bye!");
 			exitMainThread();
 		} else
-			askToContinue();
+			askUserToContinue();
+	}
+
+	private static boolean userWantsToContinue(String userResponse) {
+		return userResponse.equalsIgnoreCase("y") || userResponse.equalsIgnoreCase("yes");
+	}
+	
+	private static boolean userDoesNotWantToContinue(String userResponse) {
+		return userResponse.equalsIgnoreCase("n") || userResponse.equalsIgnoreCase("no");
 	}
 
 	private static void resetMainThread() {
