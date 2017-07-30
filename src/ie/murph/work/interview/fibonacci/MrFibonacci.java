@@ -23,23 +23,18 @@ public class MrFibonacci {
 
 		System.out.println(documentation());
 
-		while (true) {
-			System.out.println("Enter number: ");
-			long number = SCANNER.nextLong();
-			if (isNumberGreaterThanZero(number)) {
-				long beginTime = getCurrentTimeInMilliseconds();
-				long fibonacci = getFibonacciOf(number);
-				long endTime = getCurrentTimeInMilliseconds();
+		System.out.println("Enter number: ");
+		long number = SCANNER.nextLong();
+		if (isNumberGreaterThanZero(number)) {
+			long beginTime = getCurrentTimeInMilliseconds();
+			long fibonacci = getFibonacciOf(number);
+			long endTime = getCurrentTimeInMilliseconds();
 
-				long delta = endTime - beginTime;
+			long delta = endTime - beginTime;
 
-				System.out.println(printFibonacci(number, fibonacci, delta));
-				// askToContinue();
-			} else {
-				break;
-
-			}
-		}
+			System.out.println(printFibonacci(number, fibonacci, delta));
+			askToContinue();
+		} 
 	}
 
 	private static boolean isNumberGreaterThanZero(long number) {
