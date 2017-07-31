@@ -5,10 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class MrFibonacci {
-
-	// Resource:
-	// https://stackoverflow.com/questions/29317414/making-fibonacci-faster?
-
+	
 	private static Map<Long, Long> previousValuesHolder;
 	private static final Scanner SCANNER = new Scanner(System.in);
 
@@ -20,7 +17,6 @@ public class MrFibonacci {
 
 	public static void main(String[] args) {
 		System.out.println(fibonacciExplained());
-
 		System.out.println(documentation());
 
 		System.out.println("Enter number: ");
