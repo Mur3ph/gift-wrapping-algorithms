@@ -1,10 +1,14 @@
 package ie.murph.work.file.comparison;
 
+import ie.murph.work.file.comparison.delimiter.Delimiter;
+import ie.murph.work.file.comparison.read.ReadFile;
+
 public class RunFileComparison {
-	private final String DATA_FILE_ONE_URL = "data/gpp-report.txt";
-	private final String DATA_FILE_TWO_URL = "data/other-report.txt";
+	private static final String DATA_FILENAME = "data/test-data.txt";
+	private static Delimiter delimiter = new Delimiter(",");
 	
 	public static void main(String[] args){
-		
+		ReadFile readFile = new ReadFile(DATA_FILENAME, delimiter);
+		readFile.read();
 	}
 }
