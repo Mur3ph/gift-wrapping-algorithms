@@ -8,7 +8,7 @@ public class Workday {
 	private final int noRemainder = 0;
 
 //	TODO: This calculates twice, if both (3 and 5) are divisible by one number
-	public void numberDivableByThreeAndFive() {
+	public void runDivableCheck() {
 	    	total = 0;
 		for (int x = 0; x < limit; x++) {
 			numberDividableByThree(x);
