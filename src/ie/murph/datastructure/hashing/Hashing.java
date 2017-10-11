@@ -1,5 +1,7 @@
 package ie.murph.datastructure.hashing;
 
+import ie.murph.datastructure.hashing.hashcode.SimpleHashCode;
+
 public class Hashing
 {   
     public static void main(String[] args){
