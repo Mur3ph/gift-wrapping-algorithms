@@ -43,7 +43,7 @@ public class PaulyHashMap
 	     * linked list.
 	     */
 	    Node current = bucketArray[hash];
-	    while (current.next != null)
+	    while (current.getNext() != null)
 	    {
 		/* Check if the key already exists */
 		if (current.getKey().equals(entry.getKey()))
@@ -52,11 +52,11 @@ public class PaulyHashMap
 		    current.setValue(entry.getValue());
 		    return;
 		}
-		current = current.next;
+		current = current.getNext();
 	    }
 	    /* When the code gets here current.next == null */
 	    /* Insert the node */
-	    current.next = entry;
+	    current.setNext(entry);
 	}
     }
 
