@@ -37,8 +37,9 @@ public class PaulyHashMap
 	if (bucketArray[hashcode] == null)
 	{
 	    /* No collision detected. Insert the node. */
-	    bucketArray[hashcode] = entry;
-	} else
+	    insertNode(entry);
+	} 
+	else
 	{
 	    /*
 	     * Collision detected. We must place the node at the end of the
@@ -51,6 +52,11 @@ public class PaulyHashMap
     private void setHashCode(String key)
     {
 	this.hashcode = Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
+    }
+    
+    private void insertNode(Node entry)
+    {
+	bucketArray[hashcode] = entry;
     }
 
     private void collisionDetected(Node entry)
