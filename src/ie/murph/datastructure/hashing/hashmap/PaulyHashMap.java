@@ -69,7 +69,7 @@ public class PaulyHashMap
 	while (current.getNext() != null)
 	{
 	    /* Check if the key already exists */
-	    if (current.getKey().equals(entry.getKey()))
+	    if (keyExists(current, entry))
 	    {
 		/* Replace the keys value with the new one */
 		current.setValue(entry.getValue());
@@ -80,6 +80,11 @@ public class PaulyHashMap
 	/* When the code gets here current.next == null */
 	/* Insert the node */
 	current.setNext(entry);
+    }
+
+    private boolean keyExists(Node current, Node entry)
+    {
+	return current.getKey().equals(entry.getKey());
     }
 
     /**
