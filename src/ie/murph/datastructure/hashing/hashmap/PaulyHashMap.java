@@ -29,7 +29,7 @@ public class PaulyHashMap
     {
 	/* Get the hash code */
 	setHashCode(key);
-	
+
 	/* Create the Node to add to the linked list */
 	Node entry = new Node(key, value);
 
@@ -44,27 +44,36 @@ public class PaulyHashMap
 	     * Collision detected. We must place the node at the end of the
 	     * linked list.
 	     */
-	    Node current = bucketArray[hashcode];
-	    while (current.getNext() != null)
-	    {
-		/* Check if the key already exists */
-		if (current.getKey().equals(entry.getKey()))
-		{
-		    /* Replace the keys value with the new one */
-		    current.setValue(entry.getValue());
-		    return;
-		}
-		current = current.getNext();
-	    }
-	    /* When the code gets here current.next == null */
-	    /* Insert the node */
-	    current.setNext(entry);
+	    collisionDetected(entry);
 	}
     }
-    
+
     private void setHashCode(String key)
     {
 	this.hashcode = Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
+    }
+
+    private void collisionDetected(Node entry)
+    {
+	/*
+	 * Collision detected. We must place the node at the end of the linked
+	 * list.
+	 */
+	Node current = bucketArray[hashcode];
+	while (current.getNext() != null)
+	{
+	    /* Check if the key already exists */
+	    if (current.getKey().equals(entry.getKey()))
+	    {
+		/* Replace the keys value with the new one */
+		current.setValue(entry.getValue());
+		return;
+	    }
+	    current = current.getNext();
+	}
+	/* When the code gets here current.next == null */
+	/* Insert the node */
+	current.setNext(entry);
     }
 
     /**
