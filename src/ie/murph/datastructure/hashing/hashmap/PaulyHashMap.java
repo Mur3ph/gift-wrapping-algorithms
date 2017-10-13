@@ -27,7 +27,7 @@ public class PaulyHashMap
      */
     public void put(String key, String value)
     {
-	/* Get the hash code */
+	/* Set the hash code */
 	setHashCode(key);
 
 	/* Create the Node to add to the linked list */
