@@ -37,7 +37,7 @@ public class PaulyHashMap
 	if (bucketArray[hashcode] == null)
 	{
 	    /* No collision detected. Insert the node. */
-	    insertNode(entry);
+	    insertHashMapNode(entry);
 	} 
 	else
 	{
@@ -54,7 +54,7 @@ public class PaulyHashMap
 	this.hashcode = Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
     }
     
-    private void insertNode(HashMapNode entry)
+    private void insertHashMapNode(HashMapNode entry)
     {
 	bucketArray[hashcode] = entry;
     }
