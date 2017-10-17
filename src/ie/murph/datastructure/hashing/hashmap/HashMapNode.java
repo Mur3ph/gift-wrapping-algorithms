@@ -1,17 +1,17 @@
 package ie.murph.datastructure.hashing.hashmap;
 
-public class Node
+public class HashMapNode
 {
     private String mapKey;
     private String mapValue;
-    private Node nextNode;
+    private HashMapNode nextNode;
 
-    public Node()
+    public HashMapNode()
     {
 	
     }
 
-    public Node(String mapKey, String mapValue)
+    public HashMapNode(String mapKey, String mapValue)
     {
 	this.mapKey = mapKey;
 	this.mapValue = mapValue;
@@ -37,12 +37,12 @@ public class Node
 	this.mapValue = mapValue;
     }
 
-    public Node getNextNode()
+    public HashMapNode getNextNode()
     {
 	return nextNode;
     }
 
-    public void setNextNode(Node nextNode)
+    public void setNextNode(HashMapNode nextNode)
     {
 	this.nextNode = nextNode;
     }

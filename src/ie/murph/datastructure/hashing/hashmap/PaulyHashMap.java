@@ -4,7 +4,7 @@ public class PaulyHashMap
 {
     /* The initial size of the bucket array */
     private int BUCKET_ARRAY_SIZE = 256;
-    private Node bucketArray[] = new Node[BUCKET_ARRAY_SIZE];
+    private HashMapNode bucketArray[] = new HashMapNode[BUCKET_ARRAY_SIZE];
     private int hashcode;
 
     /* Constructors */
@@ -31,7 +31,7 @@ public class PaulyHashMap
 	setHashCode(key);
 
 	/* Create the Node to add to the linked list */
-	Node entry = new Node(key, value);
+	HashMapNode entry = new HashMapNode(key, value);
 
 	/* Insert the node to the bucket array at the hash index */
 	if (bucketArray[hashcode] == null)
@@ -54,18 +54,18 @@ public class PaulyHashMap
 	this.hashcode = Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
     }
     
-    private void insertNode(Node entry)
+    private void insertNode(HashMapNode entry)
     {
 	bucketArray[hashcode] = entry;
     }
 
-    private void collisionDetected(Node entry)
+    private void collisionDetected(HashMapNode entry)
     {
 	/*
 	 * Collision detected. We must place the node at the end of the linked
 	 * list.
 	 */
-	Node current = bucketArray[hashcode];
+	HashMapNode current = bucketArray[hashcode];
 	while (current.getNextNode() != null)
 	{
 	    /* Check if the key already exists */
@@ -82,7 +82,7 @@ public class PaulyHashMap
 	current.setNextNode(entry);
     }
 
-    private boolean keyExists(Node current, Node entry)
+    private boolean keyExists(HashMapNode current, HashMapNode entry)
     {
 	return current.getMapKey().equals(entry.getMapKey());
     }
@@ -100,7 +100,7 @@ public class PaulyHashMap
 	/* Get the hash */
 	int hash = Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
 	/* Search for key in linked list */
-	Node n = bucketArray[hash];
+	HashMapNode n = bucketArray[hash];
 	/* Traverse linked list */
 	while (n != null)
 	{
