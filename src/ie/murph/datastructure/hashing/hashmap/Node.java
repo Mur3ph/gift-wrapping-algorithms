@@ -2,47 +2,48 @@ package ie.murph.datastructure.hashing.hashmap;
 
 public class Node
 {
-    private String key;
-    private String value;
-    private Node next;
+    private String mapKey;
+    private String mapValue;
+    private Node nextNode;
 
     public Node()
     {
+	
     }
 
-    public Node(String key, String value)
+    public Node(String mapKey, String mapValue)
     {
-	this.key = key;
-	this.value = value;
+	this.mapKey = mapKey;
+	this.mapValue = mapValue;
     }
 
-    public String getKey()
+    public String getMapKey()
     {
-	return key;
+	return mapKey;
     }
 
-    public void setKey(String key)
+    public void setMapKey(String mapKey)
     {
-	this.key = key;
+	this.mapKey = mapKey;
     }
 
-    public String getValue()
+    public String getMapValue()
     {
-	return value;
+	return mapValue;
     }
 
-    public void setValue(String value)
+    public void setMapValue(String mapValue)
     {
-	this.value = value;
+	this.mapValue = mapValue;
     }
 
-    public Node getNext()
+    public Node getNextNode()
     {
-	return next;
+	return nextNode;
     }
 
-    public void setNext(Node next)
+    public void setNextNode(Node nextNode)
     {
-	this.next = next;
+	this.nextNode = nextNode;
     }
 }

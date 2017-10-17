@@ -66,25 +66,25 @@ public class PaulyHashMap
 	 * list.
 	 */
 	Node current = bucketArray[hashcode];
-	while (current.getNext() != null)
+	while (current.getNextNode() != null)
 	{
 	    /* Check if the key already exists */
 	    if (keyExists(current, entry))
 	    {
 		/* Replace the keys value with the new one */
-		current.setValue(entry.getValue());
+		current.setMapValue(entry.getMapValue());
 		return;
 	    }
-	    current = current.getNext();
+	    current = current.getNextNode();
 	}
 	/* When the code gets here current.next == null */
 	/* Insert the node */
-	current.setNext(entry);
+	current.setNextNode(entry);
     }
 
     private boolean keyExists(Node current, Node entry)
     {
-	return current.getKey().equals(entry.getKey());
+	return current.getMapKey().equals(entry.getMapKey());
     }
 
     /**
@@ -104,11 +104,11 @@ public class PaulyHashMap
 	/* Traverse linked list */
 	while (n != null)
 	{
-	    if (n.getKey().equals(key))
+	    if (n.getMapKey().equals(key))
 	    {
-		return n.getValue();
+		return n.getMapValue();
 	    }
-	    n = n.getNext();
+	    n = n.getNextNode();
 	}
 	/* Not found? then return null */
 	return null;
