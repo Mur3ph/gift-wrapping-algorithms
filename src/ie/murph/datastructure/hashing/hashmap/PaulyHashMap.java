@@ -98,9 +98,11 @@ public class PaulyHashMap
     public String get(String key)
     {
 	/* Get the hash */
-	int hash = Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
+	int hashcode = generateHashCode(key);
+	
 	/* Search for key in linked list */
-	HashMapNode n = bucketArray[hash];
+	HashMapNode n = searchForKeyInLinkedList(hashcode);
+	
 	/* Traverse linked list */
 	while (n != null)
 	{
@@ -112,5 +114,15 @@ public class PaulyHashMap
 	}
 	/* Not found? then return null */
 	return null;
+    }
+
+    private int generateHashCode(String key)
+    {
+	return Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
+    }
+    
+    private HashMapNode searchForKeyInLinkedList(int hashcode)
+    {
+	return bucketArray[hashcode];
     }
 }
