@@ -104,9 +104,9 @@ public class PaulyHashMap
 	HashMapNode hashMapNode = searchForKeyInLinkedList(hashcode);
 	
 	/* Traverse linked list */
-	while (hashMapNodeExists(hashMapNode))
+	while (hashMapNodeNotNull(hashMapNode))
 	{
-	    if (isBothParametersEqual(hashMapNode, key))
+	    if (keyExists(hashMapNode, key))
 	    {
 		return hashMapNode.getMapValue();
 	    }
@@ -126,12 +126,12 @@ public class PaulyHashMap
 	return bucketArray[hashcode];
     }
     
-    private boolean hashMapNodeExists(HashMapNode hashMapNode)
+    private boolean hashMapNodeNotNull(HashMapNode hashMapNode)
     {
 	return hashMapNode != null;
     }
     
-    private boolean isBothParametersEqual(HashMapNode hashMapNode, String key)
+    private boolean keyExists(HashMapNode hashMapNode, String key)
     {
 	return hashMapNode.getMapKey().equals(key);
     }
