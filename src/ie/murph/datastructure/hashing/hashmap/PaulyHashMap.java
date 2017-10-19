@@ -96,7 +96,7 @@ public class PaulyHashMap
      *            mapped to.
      * @return The value string
      */
-    public String get(String key)
+    public String getValueOfKey(String key)
     {
 	/* Get the hash */
 	int hashcode = generateHashCode(key);

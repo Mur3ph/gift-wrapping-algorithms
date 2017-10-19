@@ -29,7 +29,7 @@ public class PaulyHashMapTest
 	String k = "TestPutGet";
 	String v = "TestPutGetValue";
 	paulsHashMap.put(k, v);
-	String valueResult = paulsHashMap.get(k);
+	String valueResult = paulsHashMap.getValueOfKey(k);
 	assertEquals(v, valueResult);
     }
 
@@ -44,7 +44,7 @@ public class PaulyHashMapTest
 	/* Test all values of the get method */
 	for (int i = 0; i < NUM_ELEMENTS; i++)
 	{
-	    String value = paulsHashMap.get(Integer.toString(i));
+	    String value = paulsHashMap.getValueOfKey(Integer.toString(i));
 	    assertEquals(Integer.toString(i), value);
 	}
     }

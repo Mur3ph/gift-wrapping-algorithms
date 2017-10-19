@@ -26,7 +26,7 @@ public class Hashing
 	String k = "TestPutGet";
 	String v = "TestPutGetValue";
 	paulsHashMap.put(k, v);
-	String valueResult = paulsHashMap.get(k);
+	String valueResult = paulsHashMap.getValueOfKey(k);
 	System.out.println("\nPauly: " + valueResult);
 	
 	Map<String, String> javaHashmap = new HashMap<String, String>();
