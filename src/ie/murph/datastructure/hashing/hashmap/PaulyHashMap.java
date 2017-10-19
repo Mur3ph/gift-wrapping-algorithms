@@ -104,7 +104,7 @@ public class PaulyHashMap
 	/* Search for key in linked list */
 	HashMapNode hashMapNode = searchForKeyInLinkedList(hashcode);
 	
-	String value = traverseLinkedList(hashMapNode, key);
+	String value = searchLinkedListForValue(hashMapNode, key);
 	
 	return value;
     }
@@ -119,7 +119,7 @@ public class PaulyHashMap
 	return hashMapNodeArray[hashcode];
     }
     
-    private String traverseLinkedList(HashMapNode hashMapNode, String key)
+    private String searchLinkedListForValue(HashMapNode hashMapNode, String key)
     {
 	/* Traverse linked list */
 	while (hashMapNodeNotNull(hashMapNode))
