@@ -106,7 +106,7 @@ public class PaulyHashMap
 	/* Traverse linked list */
 	while (hashMapNodeNotNull(hashMapNode))
 	{
-	    if (khashMapNodeExists(hashMapNode, key))
+	    if (hashMapNodeExists(hashMapNode, key))
 	    {
 		return hashMapNode.getMapValue();
 	    }
@@ -131,7 +131,7 @@ public class PaulyHashMap
 	return hashMapNode != null;
     }
     
-    private boolean khashMapNodeExists(HashMapNode hashMapNode, String key)
+    private boolean hashMapNodeExists(HashMapNode hashMapNode, String key)
     {
 	return hashMapNode.getMapKey().equals(key);
     }
