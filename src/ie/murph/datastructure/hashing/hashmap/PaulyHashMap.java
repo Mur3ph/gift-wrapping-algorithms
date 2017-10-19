@@ -109,6 +109,16 @@ public class PaulyHashMap
 	return value;
     }
 
+    private int generateHashCode(String key)
+    {
+	return Math.abs(key.hashCode() % SIZE_BUCKET_ARRAY);
+    }
+    
+    private HashMapNode searchForKeyInLinkedList(int hashcode)
+    {
+	return hashMapNodeArray[hashcode];
+    }
+    
     private String traverseLinkedList(HashMapNode hashMapNode, String key)
     {
 	/* Traverse linked list */
@@ -122,16 +132,6 @@ public class PaulyHashMap
 	}
 	/* Not found? then return null or empty string */
 	return "".toString();
-    }
-
-    private int generateHashCode(String key)
-    {
-	return Math.abs(key.hashCode() % SIZE_BUCKET_ARRAY);
-    }
-    
-    private HashMapNode searchForKeyInLinkedList(int hashcode)
-    {
-	return hashMapNodeArray[hashcode];
     }
     
     private boolean hashMapNodeNotNull(HashMapNode hashMapNode)
