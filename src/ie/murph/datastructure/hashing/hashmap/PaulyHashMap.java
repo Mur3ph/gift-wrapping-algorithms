@@ -3,18 +3,19 @@ package ie.murph.datastructure.hashing.hashmap;
 public class PaulyHashMap
 {
     /* The initial size of the bucket array */
-    private int BUCKET_ARRAY_SIZE = 256;
-    private HashMapNode bucketArray[] = new HashMapNode[BUCKET_ARRAY_SIZE];
+    private int SIZE_BUCKET_ARRAY = 256;
+    private HashMapNode[] hashMapNodeArray;
     private int hashcode;
 
-    /* Constructors */
     public PaulyHashMap()
     {
+	hashMapNodeArray = new HashMapNode[SIZE_BUCKET_ARRAY];
     }
 
     public PaulyHashMap(int initialSize)
     {
-	this.BUCKET_ARRAY_SIZE = initialSize;
+	this.SIZE_BUCKET_ARRAY = initialSize;
+	hashMapNodeArray = new HashMapNode[SIZE_BUCKET_ARRAY];
     }
 
     /**
@@ -34,7 +35,7 @@ public class PaulyHashMap
 	HashMapNode entry = new HashMapNode(key, value);
 
 	/* Insert the node to the bucket array at the hash index */
-	if (bucketArray[hashcode] == null)
+	if (hashMapNodeArray[hashcode] == null)
 	{
 	    /* No collision detected. Insert the node. */
 	    insertHashMapNode(entry);
@@ -51,12 +52,12 @@ public class PaulyHashMap
 
     private void setHashCode(String key)
     {
-	this.hashcode = Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
+	this.hashcode = Math.abs(key.hashCode() % SIZE_BUCKET_ARRAY);
     }
     
     private void insertHashMapNode(HashMapNode entry)
     {
-	bucketArray[hashcode] = entry;
+	hashMapNodeArray[hashcode] = entry;
     }
 
     private void collisionDetected(HashMapNode entry)
@@ -65,7 +66,7 @@ public class PaulyHashMap
 	 * Collision detected. We must place the node at the end of the linked
 	 * list.
 	 */
-	HashMapNode current = bucketArray[hashcode];
+	HashMapNode current = hashMapNodeArray[hashcode];
 	while (current.getNextNode() != null)
 	{
 	    /* Check if the key already exists */
@@ -103,6 +104,13 @@ public class PaulyHashMap
 	/* Search for key in linked list */
 	HashMapNode hashMapNode = searchForKeyInLinkedList(hashcode);
 	
+	String value = traverseLinkedList(hashMapNode, key);
+	
+	return value;
+    }
+
+    private String traverseLinkedList(HashMapNode hashMapNode, String key)
+    {
 	/* Traverse linked list */
 	while (hashMapNodeNotNull(hashMapNode))
 	{
@@ -112,18 +120,18 @@ public class PaulyHashMap
 	    }
 	    hashMapNode = hashMapNode.getNextNode();
 	}
-	/* Not found? then return null */
-	return null;
+	/* Not found? then return null or empty string */
+	return "".toString();
     }
 
     private int generateHashCode(String key)
     {
-	return Math.abs(key.hashCode() % BUCKET_ARRAY_SIZE);
+	return Math.abs(key.hashCode() % SIZE_BUCKET_ARRAY);
     }
     
     private HashMapNode searchForKeyInLinkedList(int hashcode)
     {
-	return bucketArray[hashcode];
+	return hashMapNodeArray[hashcode];
     }
     
     private boolean hashMapNodeNotNull(HashMapNode hashMapNode)
