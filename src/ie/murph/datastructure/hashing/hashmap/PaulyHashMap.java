@@ -128,7 +128,7 @@ public class PaulyHashMap
 	    {
 		return hashMapNode.getMapValue();
 	    }
-	    hashMapNode = hashMapNode.getNextNode();
+	    setHashMapNode(hashMapNode);
 	}
 	/* Not found? then return null or empty string */
 	return "".toString();
@@ -142,6 +142,11 @@ public class PaulyHashMap
     private boolean hashMapNodeExistsForGivenKey(HashMapNode hashMapNode, String key)
     {
 	return hashMapNode.getMapKey().equals(key);
+    }
+    
+    private void setHashMapNode(HashMapNode hashMapNode)
+    {
+	hashMapNode = hashMapNode.getNextNode();
     }
 
 }
