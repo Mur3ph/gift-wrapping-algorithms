@@ -121,10 +121,10 @@ public class PaulyHashMap
     
     private String searchLinkedListForValue(HashMapNode hashMapNode, String key)
     {
-	/* Traverse linked list */
+	/* Traverse linked list to find a value, find a position for insertion, etc. */
 	while (hashMapNodeNotNull(hashMapNode))
 	{
-	    if (hashMapNodeExists(hashMapNode, key))
+	    if (hashMapNodeExistsForGivenKey(hashMapNode, key))
 	    {
 		return hashMapNode.getMapValue();
 	    }
@@ -139,7 +139,7 @@ public class PaulyHashMap
 	return hashMapNode != null;
     }
     
-    private boolean hashMapNodeExists(HashMapNode hashMapNode, String key)
+    private boolean hashMapNodeExistsForGivenKey(HashMapNode hashMapNode, String key)
     {
 	return hashMapNode.getMapKey().equals(key);
     }
