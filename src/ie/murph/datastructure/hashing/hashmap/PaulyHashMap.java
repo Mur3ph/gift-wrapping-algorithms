@@ -31,7 +31,7 @@ public class PaulyHashMap
      * @param value
      *            Value string in which the key string maps to.
      */
-    public void put(String key, String value)
+    public void putKeyAndValuePairIntoDataStructure(String key, String value)
     {
 	/* Set the hash code */
 	setHashCode(key);

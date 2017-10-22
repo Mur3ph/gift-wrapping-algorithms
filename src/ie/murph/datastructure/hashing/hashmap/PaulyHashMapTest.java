@@ -20,7 +20,7 @@ public class PaulyHashMapTest
     @Test
     public void testHashMapPut()
     {
-	paulsHashMap.put("Test1", "Test1Value");
+	paulsHashMap.putKeyAndValuePairIntoDataStructure("Test1", "Test1Value");
     }
 
     @Test
@@ -28,7 +28,7 @@ public class PaulyHashMapTest
     {
 	String k = "TestPutGet";
 	String v = "TestPutGetValue";
-	paulsHashMap.put(k, v);
+	paulsHashMap.putKeyAndValuePairIntoDataStructure(k, v);
 	String valueResult = paulsHashMap.getValueOfKey(k);
 	assertEquals(v, valueResult);
     }
@@ -39,7 +39,7 @@ public class PaulyHashMapTest
 	/* Initialise hashmap */
 	for (int i = 0; i < NUM_ELEMENTS; i++)
 	{
-	    paulsHashMap.put(Integer.toString(i), Integer.toString(i));
+	    paulsHashMap.putKeyAndValuePairIntoDataStructure(Integer.toString(i), Integer.toString(i));
 	}
 	/* Test all values of the get method */
 	for (int i = 0; i < NUM_ELEMENTS; i++)

@@ -25,7 +25,7 @@ public class Hashing
 	PaulyHashMap paulsHashMap = new PaulyHashMap();
 	String k = "TestPutGet";
 	String v = "TestPutGetValue";
-	paulsHashMap.put(k, v);
+	paulsHashMap.putKeyAndValuePairIntoDataStructure(k, v);
 	String valueResult = paulsHashMap.getValueOfKey(k);
 	System.out.println("\nPauly: " + valueResult);
 	
