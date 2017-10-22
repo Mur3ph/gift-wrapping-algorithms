@@ -17,6 +17,11 @@ public class PaulyHashMap
 	this.SIZE_BUCKET_ARRAY = initialSize;
 	hashMapNodeArray = new HashMapNode[SIZE_BUCKET_ARRAY];
     }
+    
+    private HashMapNode[] getHashMapNodeArray()
+    {
+	return this.hashMapNodeArray;
+    }
 
     /**
      * Used to put a key-value pair into the data structure.
@@ -35,7 +40,7 @@ public class PaulyHashMap
 	HashMapNode entry = new HashMapNode(key, value);
 
 	/* Insert the node to the bucket array at the hash index */
-	if (hashMapNodeArray[hashcode] == null)
+	if (getHashMapNodeArray()[hashcode] == null)
 	{
 	    /* No collision detected. Insert the node. */
 	    insertHashMapNode(entry);
@@ -57,7 +62,7 @@ public class PaulyHashMap
     
     private void insertHashMapNode(HashMapNode entry)
     {
-	hashMapNodeArray[hashcode] = entry;
+	getHashMapNodeArray()[hashcode] = entry;
     }
 
     private void collisionDetected(HashMapNode entry)
@@ -66,7 +71,7 @@ public class PaulyHashMap
 	 * Collision detected. We must place the node at the end of the linked
 	 * list.
 	 */
-	HashMapNode current = hashMapNodeArray[hashcode];
+	HashMapNode current = getHashMapNodeArray()[hashcode];
 	while (current.getNextNode() != null)
 	{
 	    /* Check if the key already exists */
@@ -116,7 +121,7 @@ public class PaulyHashMap
     
     private HashMapNode searchForKeyInLinkedList(int hashcode)
     {
-	return hashMapNodeArray[hashcode];
+	return getHashMapNodeArray()[hashcode];
     }
     
     private String searchLinkedListForValue(HashMapNode hashMapNode, String key)
