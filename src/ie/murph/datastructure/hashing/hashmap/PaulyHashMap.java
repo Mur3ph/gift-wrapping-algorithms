@@ -81,7 +81,7 @@ public class PaulyHashMap
 		current.setMapValue(entry.getMapValue());
 		return;
 	    }
-	    current = current.getNextNode();
+	    setHashMapNode(current);
 	}
 	/* When the code gets here current.next == null */
 	/* Insert the node */
