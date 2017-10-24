@@ -9,7 +9,7 @@ import org.junit.Test;
 public class PaulyHashMapTest
 {
     private PaulyHashMap paulsHashMap;
-    private final int NUM_ELEMENTS = 200000; // I have slowed the algorithm down, use to run faster, a lot faster with this number of elements
+    private final int NUM_ELEMENTS = 20; // 200000: Slowed the algorithm down, use to run faster, a lot faster with this number of elements
 
     @Before
     public void setUp()
