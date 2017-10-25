@@ -3,7 +3,7 @@ package ie.murph.datastructure.hashing.hashmap;
 public class PaulyHashMap
 {
     /* The initial size of the bucket array */
-    private int SIZE_BUCKET_ARRAY = 256;
+    private int SIZE_BUCKET_ARRAY = 256000;
     private HashMapNode[] hashMapNodeArray;
     private int hashcode;
 

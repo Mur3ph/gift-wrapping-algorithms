@@ -9,8 +9,8 @@ import org.junit.Test;
 public class PaulyHashMapTest
 {
     private PaulyHashMap paulsHashMap;
-    private final int NUM_ELEMENTS = 20; // 200000: Slowed the algorithm down, use to run faster, a lot faster with this number of elements
-
+    private final int NUM_ELEMENTS = 10000; // 200000: Slowed the algorithm down, use to run faster, a lot faster with this number of elements
+    					    // Changing SIZE_BUCKET_ARRAY variable in PaulyHashMap class caused this to slow ALOT
     @Before
     public void setUp()
     {
