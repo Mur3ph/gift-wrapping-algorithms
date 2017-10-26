@@ -3,19 +3,19 @@ package ie.murph.datastructure.hashing.hashmap;
 public class PaulyHashMap
 {
     /* The initial size of the bucket array */
-    private int SIZE_BUCKET_ARRAY = 256000;
+    private int SIZE_OF_HASH_MAP_NODE_ARRAY = 256000;
     private HashMapNode[] hashMapNodeArray;
     private int hashcode;
 
     public PaulyHashMap()
     {
-	hashMapNodeArray = new HashMapNode[SIZE_BUCKET_ARRAY];
+	hashMapNodeArray = new HashMapNode[SIZE_OF_HASH_MAP_NODE_ARRAY];
     }
 
     public PaulyHashMap(int initialSize)
     {
-	this.SIZE_BUCKET_ARRAY = initialSize;
-	hashMapNodeArray = new HashMapNode[SIZE_BUCKET_ARRAY];
+	this.SIZE_OF_HASH_MAP_NODE_ARRAY = initialSize;
+	hashMapNodeArray = new HashMapNode[SIZE_OF_HASH_MAP_NODE_ARRAY];
     }
     
     private HashMapNode[] getHashMapNodeArray()
@@ -57,7 +57,7 @@ public class PaulyHashMap
 
     private void setHashCode(String key)
     {
-	this.hashcode = Math.abs(key.hashCode() % SIZE_BUCKET_ARRAY);
+	this.hashcode = Math.abs(key.hashCode() % SIZE_OF_HASH_MAP_NODE_ARRAY);
     }
     
     private void insertHashMapNode(HashMapNode entry)
@@ -116,7 +116,7 @@ public class PaulyHashMap
 
     private int generateHashCode(String key)
     {
-	return Math.abs(key.hashCode() % SIZE_BUCKET_ARRAY);
+	return Math.abs(key.hashCode() % SIZE_OF_HASH_MAP_NODE_ARRAY);
     }
     
     private HashMapNode searchForKeyInLinkedList(int hashcode)
