@@ -1,4 +1,4 @@
-package ie.murph.datastructure.hashing.hashmap;
+package main.java.ie.murph.datastructure.hashing.hashmap;
 
 public class PaulyHashMap
 {

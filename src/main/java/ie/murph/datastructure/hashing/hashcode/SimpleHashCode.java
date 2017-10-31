@@ -1,4 +1,4 @@
-package ie.murph.datastructure.hashing.hashcode;
+package main.java.ie.murph.datastructure.hashing.hashcode;
 
 public class SimpleHashCode
 {

@@ -1,10 +1,10 @@
-package ie.murph.datastructure.hashing;
+package test.java.ie.murph.datastructure.hashing;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import ie.murph.datastructure.hashing.hashcode.SimpleHashCode;
-import ie.murph.datastructure.hashing.hashmap.PaulyHashMap;
+import main.java.ie.murph.datastructure.hashing.hashcode.SimpleHashCode;
+import main.java.ie.murph.datastructure.hashing.hashmap.PaulyHashMap;
 
 public class Hashing
 {   

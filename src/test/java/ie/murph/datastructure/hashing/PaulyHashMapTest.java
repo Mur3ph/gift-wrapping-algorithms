@@ -1,10 +1,12 @@
-package ie.murph.datastructure.hashing.hashmap;
+package test.java.ie.murph.datastructure.hashing;
 
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import main.java.ie.murph.datastructure.hashing.hashmap.PaulyHashMap;
 
 public class PaulyHashMapTest
 {
