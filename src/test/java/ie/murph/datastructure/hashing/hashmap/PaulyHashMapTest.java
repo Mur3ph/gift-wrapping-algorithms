@@ -1,4 +1,4 @@
-package test.java.ie.murph.datastructure.hashing;
+package test.java.ie.murph.datastructure.hashing.hashmap;
 
 import static org.junit.Assert.*;
 
