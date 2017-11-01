@@ -13,7 +13,7 @@ public class Answer {
 		System.out.println("");
 
 		Workday workday = new Workday();
-		workday.numberDivableByThreeAndFive();
+		workday.runDivableCheck();
 		workday.numberDividableByThreeAndFivePartDeux();
 
 		System.out.println("");
@@ -22,4 +22,4 @@ public class Answer {
 		cr2.isPrime();
 	}
 
-}// END OF CLASS
+}
