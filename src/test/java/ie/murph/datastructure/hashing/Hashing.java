@@ -23,15 +23,15 @@ public class Hashing
 	System.out.println("\nHashmap");
 	
 	PaulyHashMap paulsHashMap = new PaulyHashMap();
-	String k = "TestPutGet";
-	String v = "TestPutGetValue";
-	paulsHashMap.putKeyAndValuePairIntoDataStructure(k, v);
-	String valueResult = paulsHashMap.getValueOfKey(k);
+	String key = "TestPutGet";
+	String value = "TestPutGetValue";
+	paulsHashMap.putKeyAndValuePairIntoDataStructure(key, value);
+	String valueResult = paulsHashMap.getValueOfKey(key);
 	System.out.println("\nPauly: " + valueResult);
 	
 	Map<String, String> javaHashmap = new HashMap<String, String>();
-	javaHashmap.put(k, v);      
-	String javaValueResult = javaHashmap.get(k);
+	javaHashmap.put(key, value);      
+	String javaValueResult = javaHashmap.get(key);
 	System.out.println("\nJavy: " + javaValueResult);
     }
 }
