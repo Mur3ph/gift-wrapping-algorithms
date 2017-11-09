@@ -72,7 +72,7 @@ public class PaulyHashMap
 	 * list.
 	 */
 	HashMapNode current = getHashMapNodeArray()[hashcode];
-	while (current.getNextNode() != null)
+	while (current.getNextHashMapNode() != null)
 	{
 	    /* Check if the key already exists */
 	    if (keyExists(current, entry))
@@ -85,7 +85,7 @@ public class PaulyHashMap
 	}
 	/* When the code gets here current.next == null */
 	/* Insert the node */
-	current.setNextNode(entry);
+	current.setNextHashMapNode(entry);
     }
 
     private boolean keyExists(HashMapNode current, HashMapNode entry)
@@ -151,7 +151,7 @@ public class PaulyHashMap
     
     private void setHashMapNode(HashMapNode hashMapNode)
     {
-	hashMapNode = hashMapNode.getNextNode();
+	hashMapNode = hashMapNode.getNextHashMapNode();
     }
 
 }
