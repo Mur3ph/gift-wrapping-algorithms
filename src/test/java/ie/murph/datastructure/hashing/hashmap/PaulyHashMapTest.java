@@ -10,7 +10,7 @@ import main.java.ie.murph.datastructure.hashing.hashmap.PaulyHashMap;
 
 public class PaulyHashMapTest {
 	private PaulyHashMap paulsHashMap;
-	private final int NUM_ELEMENTS = 10000; // 200000: Slowed the algorithm
+	private final int NUMBER_OF_KEY_VALUE_ELEMENTS = 10000; // 200000: Slowed the algorithm
 											// down, use to run faster, a lot
 											// faster with this number of
 											// elements
@@ -39,11 +39,11 @@ public class PaulyHashMapTest {
 	@Test
 	public void testHashMapCollisions() {
 		/* Initialise hashmap */
-		for (int i = 0; i < NUM_ELEMENTS; i++) {
+		for (int i = 0; i < NUMBER_OF_KEY_VALUE_ELEMENTS; i++) {
 			paulsHashMap.putKeyAndValuePairIntoDataStructure(Integer.toString(i), Integer.toString(i));
 		}
 		/* Test all values of the get method */
-		for (int i = 0; i < NUM_ELEMENTS; i++) {
+		for (int i = 0; i < NUMBER_OF_KEY_VALUE_ELEMENTS; i++) {
 			String value = paulsHashMap.getValueOfKey(Integer.toString(i));
 			assertEquals(Integer.toString(i), value);
 		}
