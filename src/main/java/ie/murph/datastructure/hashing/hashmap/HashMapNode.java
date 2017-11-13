@@ -6,7 +6,7 @@ public class HashMapNode {
 	private HashMapNode nextHashMapNode;
 
 	public HashMapNode() {
-
+		this.nextHashMapNode = new HashMapNode();
 	}
 
 	public HashMapNode(String mapKey, String mapValue) {
