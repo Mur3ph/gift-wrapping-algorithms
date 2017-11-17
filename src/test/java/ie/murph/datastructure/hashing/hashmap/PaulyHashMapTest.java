@@ -9,7 +9,7 @@ import org.junit.Test;
 import main.java.ie.murph.datastructure.hashing.hashmap.PaulyHashMap;
 
 public class PaulyHashMapTest {
-	private PaulyHashMap paulsHashMap;
+	private PaulyHashMap paulyHashMap;
 	private final int NUMBER_OF_KEY_VALUE_ELEMENTS = 10000; // 200000: Slowed the algorithm
 											// down, use to run faster, a lot
 											// faster with this number of
@@ -19,20 +19,20 @@ public class PaulyHashMapTest {
 
 	@Before
 	public void setUp() {
-		paulsHashMap = new PaulyHashMap();
+		paulyHashMap = new PaulyHashMap();
 	}
 
 	@Test
 	public void testHashMapPut() {
-		paulsHashMap.putKeyAndValuePairIntoDataStructure("Test1", "Test1Value");
+		paulyHashMap.putKeyAndValuePairIntoDataStructure("Test1Key", "Test1Value");
 	}
 
 	@Test
 	public void testPutGet() {
-		String k = "TestPutGet";
+		String k = "TestPutGetKey";
 		String v = "TestPutGetValue";
-		paulsHashMap.putKeyAndValuePairIntoDataStructure(k, v);
-		String valueResult = paulsHashMap.getValueOfKey(k);
+		paulyHashMap.putKeyAndValuePairIntoDataStructure(k, v);
+		String valueResult = paulyHashMap.getValueOfKey(k);
 		assertEquals(v, valueResult);
 	}
 
@@ -40,17 +40,17 @@ public class PaulyHashMapTest {
 	public void testHashMapCollisions() {
 		/* Initialise hashmap */
 		for (int i = 0; i < NUMBER_OF_KEY_VALUE_ELEMENTS; i++) {
-			paulsHashMap.putKeyAndValuePairIntoDataStructure(Integer.toString(i), Integer.toString(i));
+			paulyHashMap.putKeyAndValuePairIntoDataStructure(Integer.toString(i), Integer.toString(i));
 		}
 		/* Test all values of the get method */
 		for (int i = 0; i < NUMBER_OF_KEY_VALUE_ELEMENTS; i++) {
-			String value = paulsHashMap.getValueOfKey(Integer.toString(i));
+			String value = paulyHashMap.getValueOfKey(Integer.toString(i));
 			assertEquals(Integer.toString(i), value);
 		}
 	}
 
 	@After
 	public void tearDown() {
-		paulsHashMap = null;
+		paulyHashMap = null;
 	}
 }
