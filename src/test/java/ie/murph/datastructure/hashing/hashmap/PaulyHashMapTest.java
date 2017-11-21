@@ -28,12 +28,12 @@ public class PaulyHashMapTest {
 	}
 
 	@Test
-	public void testPutGet() {
-		String k = "TestPutGetKey";
-		String v = "TestPutGetValue";
-		paulyHashMap.putKeyAndValuePairIntoDataStructure(k, v);
-		String valueResult = paulyHashMap.getValueOfKey(k);
-		assertEquals(v, valueResult);
+	public void testPutGetMethods() {
+		String key = "TestPutGetKey";
+		String value = "TestPutGetValue";
+		paulyHashMap.putKeyAndValuePairIntoDataStructure(key, value);
+		String valueResult = paulyHashMap.getValueOfKey(key);
+		assertEquals(value, valueResult);
 	}
 
 	@Test
