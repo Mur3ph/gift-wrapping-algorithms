@@ -6,6 +6,9 @@ import ie.murph.work.interview.workday.Workday;
 
 public class Answer {
 	public static void main(String[] args) {
+//		Resources for algorithms to learn
+		System.out.println(ResourceForAlgorithmsToLearn.printTaskSheet());
+		
 		EMC emc = new EMC();
 		emc.SnapCrackleOrPop();
 		emc.reverseWord();
@@ -20,6 +23,9 @@ public class Answer {
 
 		CR2 cr2 = new CR2();
 		cr2.isPrime();
+		
+//		Resources for algorithms to learn
+		System.out.println(ResourceForAlgorithmsToLearn.printTaskSheet());
 	}
 
 }
