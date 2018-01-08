@@ -8,7 +8,8 @@ import ie.murph.work.interview.workday.Workday;
 public class Answer {
 	public static void main(String[] args) {
 //		Resources for algorithms to learn
-		System.out.println(ResourceForAlgorithmsToLearn.printTaskSheet());
+		ResourceForAlgorithmsToLearn resourceForAlgorithmsToLearn = new ResourceForAlgorithmsToLearn();
+		System.out.println(resourceForAlgorithmsToLearn.printTaskSheet());
 		
 		EMC emc = new EMC();
 		emc.SnapCrackleOrPop();
@@ -25,8 +26,10 @@ public class Answer {
 		CR2 cr2 = new CR2();
 		cr2.isPrime();
 		
+		System.out.println("");
+		
 //		Resources for algorithms to learn
-		System.out.println(ResourceForAlgorithmsToLearn.printTaskSheet());
+		System.out.println(resourceForAlgorithmsToLearn.printTaskSheet());
 	}
 
 }
