@@ -1,5 +1,6 @@
 package ie.murph.work.interview;
 
+import ie.murph.resources.ResourceForAlgorithmsToLearn;
 import ie.murph.work.interview.cr2.CR2;
 import ie.murph.work.interview.emc.EMC;
 import ie.murph.work.interview.workday.Workday;

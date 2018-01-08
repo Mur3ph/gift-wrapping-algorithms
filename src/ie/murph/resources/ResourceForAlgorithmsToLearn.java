@@ -1,4 +1,4 @@
-package ie.murph.work.interview;
+package ie.murph.resources;
 
 public class ResourceForAlgorithmsToLearn {
 	
