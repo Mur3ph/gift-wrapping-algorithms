@@ -38,6 +38,21 @@ Learning and creating for Java Algorithms
 
 
 
+## Hash Algorithms and Algorithm tasks
+1. [Hash Function](https://en.wikipedia.org/wiki/Hash_Function)
+2. [Database: Hash Join](https://en.wikipedia.org/wiki/Hash_join)
+3. [Cryptographic hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
+4. [Geometric hashing](https://en.wikipedia.org/wiki/Geometric_hashing)
+5. [SHA-3](https://en.wikipedia.org/wiki/SHA-3)
+6. [MD5 (NB: There is now a method of generating collisions for MD5)](https://en.wikipedia.org/wiki/MD5)
+7. [HMAC: (Keyed-hash message authentication)](https://en.wikipedia.org/wiki/Keyed-hash_message_authentication_code)
+8. [Tiger: TTH (Usually used in Tiger tree hashes)](https://en.wikipedia.org/wiki/Tiger_(hash))
+9. [List of Hash Functions](http://www.cse.yorku.ca/~oz/hash.html)
+10. [Geeks-for-Geeks Top Ten Algorithms](http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
+11. [Rosetta Code: Programming Tasks](http://rosettacode.org/wiki/Category:Programming_Tasks)
+
+
+
 ## Math & Algorithms
 1. [Linear Algebra]()
 2. [Calculus]()
@@ -69,15 +84,3 @@ Learning and creating for Java Algorithms
 
 
 
-## Hash Algorithms and Algorithm tasks
-1. [Hash Function](https://en.wikipedia.org/wiki/Hash_Function)
-2. [Database: Hash Join](https://en.wikipedia.org/wiki/Hash_join)
-3. [Cryptographic hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
-4. [Geometric hashing](https://en.wikipedia.org/wiki/Geometric_hashing)
-5. [SHA-3](https://en.wikipedia.org/wiki/SHA-3)
-6. [MD5 (NB: There is now a method of generating collisions for MD5)](https://en.wikipedia.org/wiki/MD5)
-7. [HMAC: (Keyed-hash message authentication)](https://en.wikipedia.org/wiki/Keyed-hash_message_authentication_code)
-8. [Tiger: TTH (Usually used in Tiger tree hashes)](https://en.wikipedia.org/wiki/Tiger_(hash))
-9. [List of Hash Functions](http://www.cse.yorku.ca/~oz/hash.html)
-10. [Geeks-for-Geeks Top Ten Algorithms](http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
-11. [Rosetta Code: Programming Tasks](http://rosettacode.org/wiki/Category:Programming_Tasks)
