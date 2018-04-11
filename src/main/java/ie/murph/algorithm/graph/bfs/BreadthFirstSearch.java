@@ -1,4 +1,4 @@
-package ie.murph.algorithm.graph.bfs;
+package main.java.ie.murph.algorithm.graph.bfs;
 
 import java.util.HashMap;
 import java.util.Map;

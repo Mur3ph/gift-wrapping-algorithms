@@ -1,9 +1,9 @@
-package ie.murph.work.interview;
+package main.java.ie.murph.work.interview;
 
-import ie.murph.resources.ResourceForAlgorithmsToLearn;
-import ie.murph.work.interview.cr2.CR2;
-import ie.murph.work.interview.emc.EMC;
-import ie.murph.work.interview.workday.Workday;
+import main.java.ie.murph.resources.ResourceForAlgorithmsToLearn;
+import main.java.ie.murph.work.interview.cr2.CR2;
+import main.java.ie.murph.work.interview.emc.EMC;
+import main.java.ie.murph.work.interview.workday.Workday;
 
 public class Answer {
 	public static void main(String[] args) {

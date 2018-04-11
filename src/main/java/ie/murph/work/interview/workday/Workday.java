@@ -1,4 +1,4 @@
-package ie.murph.work.interview.workday;
+package main.java.ie.murph.work.interview.workday;
 
 public class Workday {
 	private int total = 0;

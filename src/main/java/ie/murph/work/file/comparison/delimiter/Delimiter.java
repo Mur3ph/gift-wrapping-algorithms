@@ -1,4 +1,4 @@
-package ie.murph.work.file.comparison.delimiter;
+package main.java.ie.murph.work.file.comparison.delimiter;
 
 import java.io.BufferedReader;
 import java.util.Scanner;

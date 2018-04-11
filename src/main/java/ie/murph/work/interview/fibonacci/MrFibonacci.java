@@ -1,4 +1,4 @@
-package ie.murph.work.interview.fibonacci;
+package main.java.ie.murph.work.interview.fibonacci;
 
 import java.util.HashMap;
 import java.util.Map;

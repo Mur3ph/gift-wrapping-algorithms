@@ -1,7 +1,7 @@
-package ie.murph.work.file.comparison;
+package main.java.ie.murph.work.file.comparison;
 
-import ie.murph.work.file.comparison.delimiter.Delimiter;
-import ie.murph.work.file.comparison.read.ReadFile;
+import main.java.ie.murph.work.file.comparison.delimiter.Delimiter;
+import main.java.ie.murph.work.file.comparison.read.ReadFile;
 
 public class RunFileComparison {
 	private static final String DATA_FILENAME = "data/test-data.txt";

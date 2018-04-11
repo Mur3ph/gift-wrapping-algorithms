@@ -1,4 +1,4 @@
-package ie.murph.work.interview.emc;
+package main.java.ie.murph.work.interview.emc;
 
 public class EMC {
 

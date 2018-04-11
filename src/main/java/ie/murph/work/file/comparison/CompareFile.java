@@ -1,4 +1,4 @@
-package ie.murph.work.file.comparison;
+package main.java.ie.murph.work.file.comparison;
 
 import java.io.File;
 import java.io.FileNotFoundException;

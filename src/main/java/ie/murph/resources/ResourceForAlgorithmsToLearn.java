@@ -1,4 +1,4 @@
-package ie.murph.resources;
+package main.java.ie.murph.resources;
 
 public class ResourceForAlgorithmsToLearn {
 	

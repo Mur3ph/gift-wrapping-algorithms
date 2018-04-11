@@ -1,11 +1,11 @@
-package ie.murph.work.file.comparison.read;
+package main.java.ie.murph.work.file.comparison.read;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import ie.murph.work.file.comparison.delimiter.Delimiter;
+import main.java.ie.murph.work.file.comparison.delimiter.Delimiter;
 
 public class ReadFile {
 

@@ -1,4 +1,4 @@
-package ie.murph.work.interview.cr2;
+package main.java.ie.murph.work.interview.cr2;
 
 import java.util.Scanner;
 
