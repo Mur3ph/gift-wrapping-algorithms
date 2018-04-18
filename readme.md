@@ -28,6 +28,7 @@ Learning and creating for Java Algorithms
 2. [List of Software Engineering Algorithms](https://en.wikipedia.org/wiki/List_of_algorithms#Software_engineering)
 3. [List of Artificial Intelligence Algorithms](https://en.wikipedia.org/wiki/Outline_of_artificial_intelligence#AI_projects)
 4. [Evolutionary computation: Genetic Algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm)
+ * [Architectural Optimisation and Evolutionary Systems with Genetic Algorithms](http://www.interactivearchitecture.org/architectural-optimisation-and-evolutionary-systems-with-genetic-algorithms.html)
 5. [Artificial Neural Network](https://en.wikipedia.org/wiki/Artificial_neural_network)
 6. [Database: Join Algorithm](https://en.wikipedia.org/wiki/Join_(SQL))
 7. [Swarm Intelligence: Ant Colony Optimization](https://en.wikipedia.org/wiki/Ant_colony_optimization)
@@ -35,6 +36,7 @@ Learning and creating for Java Algorithms
 9. [Statistical AI](https://en.wikipedia.org/wiki/Artificial_intelligence#Statistical)
 10. [Probabilistic methods](https://en.wikipedia.org/wiki/Probability)
 11. [7 algorithms and data structures every programmer should know about](http://blog.hackerearth.com/2015/05/top-7-algorithms-and-data-structures-every-programmer-should-know-about.html)
+12. [Mathematical Optimization](https://en.wikipedia.org/wiki/Mathematical_optimization)
 
 
 
