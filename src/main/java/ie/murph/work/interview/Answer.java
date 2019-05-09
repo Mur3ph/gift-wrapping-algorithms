@@ -1,9 +1,9 @@
 package main.java.ie.murph.work.interview;
 
 import main.java.ie.murph.resources.ResourceForAlgorithmsToLearn;
-import main.java.ie.murph.work.interview.cr2.CR2;
-import main.java.ie.murph.work.interview.emc.EMC;
-import main.java.ie.murph.work.interview.workday.Workday;
+import main.java.ie.murph.work.interview.cr2.CR2PrimeNumber;
+import main.java.ie.murph.work.interview.emc.EMCSnapCracklePop;
+import main.java.ie.murph.work.interview.workday.WorkdayDividable;
 
 public class Answer {
 	public static void main(String[] args) {
@@ -11,19 +11,19 @@ public class Answer {
 		ResourceForAlgorithmsToLearn resourceForAlgorithmsToLearn = new ResourceForAlgorithmsToLearn();
 		System.out.println(resourceForAlgorithmsToLearn.printTaskSheet());
 		
-		EMC emc = new EMC();
+		EMCSnapCracklePop emc = new EMCSnapCracklePop();
 		emc.SnapCrackleOrPop();
 		emc.reverseWord();
 
 		System.out.println("");
 
-		Workday workday = new Workday();
+		WorkdayDividable workday = new WorkdayDividable();
 		workday.runDivableCheck();
 		workday.numberDividableByThreeAndFivePartDeux();
 
 		System.out.println("");
 
-		CR2 cr2 = new CR2();
+		CR2PrimeNumber cr2 = new CR2PrimeNumber();
 		cr2.isPrime();
 		
 		System.out.println("");

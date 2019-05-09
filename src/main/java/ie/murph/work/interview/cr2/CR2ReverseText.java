@@ -1,10 +1,10 @@
 package main.java.ie.murph.work.interview.cr2;
 
-public class CR22 {
+public class CR2ReverseText {
 	
 	public static void main(String[] args)
 	{
-		CR22 cr = new CR22();
+		CR2ReverseText cr = new CR2ReverseText();
 		System.out.println(cr.reverseText("Navan"));
 		System.out.println(cr.reverseTextWithStringBuilder("Navan"));
 	}

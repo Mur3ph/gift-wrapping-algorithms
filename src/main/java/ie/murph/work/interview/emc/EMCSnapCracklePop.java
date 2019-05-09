@@ -1,6 +1,6 @@
 package main.java.ie.murph.work.interview.emc;
 
-public class EMC {
+public class EMCSnapCracklePop {
 
 	private static final String EMPTY_STRING = "";
 	private final int MAX_NUMBER = 51;

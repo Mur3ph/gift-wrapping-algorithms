@@ -1,6 +1,6 @@
 package main.java.ie.murph.work.interview.workday;
 
-public class Workday {
+public class WorkdayDividable {
 	private int total = 0;
 	private final int limit = 101;
 	private final int numberThree = 3;
